@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--CSS-->
+
+        <link rel="stylesheet" href="css/equipe.css">
+
+        <!--Title-->
+
+        <title>Modelo</title>
+    </head>
+
+    <body>
+
+        <!--Barra de Progresso-->
+        
+            <div id="progress">
+                <span id="progress-value"></span>
+            </div>
+
+            <!--Menu Top-->
+
+            <header class="cabecalho">
+                <div class="capa">
+                    <div class="navbar">
+                        <div class="dentro_navbar">
+                            <div class="logo">  <!--Logo Nome da Faculdade-->
+                                <a href="#">Faculdade 
+                                    <span>Unip</span>
+                                </a>
+                            </div>
+                            <div class="menu"> <!--Barra do Menu-->
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="parcerias.html">Parcerias</a></li>
+                                    <li><a href="servicos.html">Serviços</a></li>
+                                    <li><a href="#" class="active">Equipe</a></li>
+                                    <li><a href="#contato">Contato</a></li>
+                                </ul>
+                            </div>
+                        </div>
+            </header>
+
+                <!--Texto-->
+<!--
+            <div class="container">
+                <div class="subcontainer">
+                    <h2>Atualmente atuamos em 197 países</h2>
+                    <div class="subtexto">
+                        <p>O primeiro funcionário e fundador dessa empresa foi Sthepy Curry, que a criou em 1973 e até, 2019 atuava conosco por essa luta mas, por motivos pessoais ele precisou se afastar mas ainda tentar fazer o melhor pela natureza</p>
+                    </div> 
+                </div>
+
+            </div>  
+        -->
+
+<!--TimeLine-->
+        <div class="timeline-principal">
+            <div class="h1-timeline">
+                <h1>Nosso Grupo</h1>
+            </div>
+                
+                <br> 
+            
+            <div class="process-wrapper">
+                <div id="progress-bar-container">
+                    <ul>
+                        <li class="step step01 active"><div class="step-inner">1º FASE</div></li>
+                        <li class="step step02"><div class="step-inner">2º FASE</div></li>
+                        <li class="step step03"><div class="step-inner">3º FASE</div></li>
+                        <li class="step step04"><div class="step-inner">4º FASE</div></li>
+                        <li class="step step05"><div class="step-inner">5º FASE</div></li>
+                    </ul>
+                    
+                    <div id="line">
+                        <div id="line-progress"></div>
+                    </div>
+                </div>
+
+                <div id="progress-content-section">
+                    <div class="section-content discovery active">
+                        <h2>2007</h2>
+                        <p>Em 2007, criamos um grupo com apenas uma meta transformar São Paulo na cidade mais alvorizada por Km². Na época, nós eramos apenas 5 funcionários, faziamos tudo com nossas próprias mãos sem ajuda de nenhuma outra empresa ou governo. Na época, em SP haviam 425,5 árvores por quilômetro quadrado.</p>
+                    </div>
+                    
+                    <div class="section-content strategy">
+                        <h2>2012</h2>
+                        <p>Depois de 5 anos, conseguimos fechar nossa primeira parceria com uma empresa que nos ajudou na construção do nosso primeiro escritório oficial totalmente biodegradável e único em toda Améria Latina. Além também, do grande número de funcionários que a nossa empresa conseguiu alcançar, de 5 funcionários para 194 funcionários. O número de árvores por quilômetro quadrado em SP subiu para 451.</p>
+                    </div>
+                    
+                    <div class="section-content creative">
+                        <h2>2018</h2>
+                        <p>Em 2018 conseguimos o feito inédito globalmente, de ser a primeira empresa de sustentabilidade a fechar parceria com a Fifa para a Copa do Mundo na Rússia. Com isso, conseguimos abrir mais 4 escritórios em São Paulo e, 2 escritórios temporários em Moscow. Nosso número de funcionários cresceu de forma exponencial, de 194 funcionários para 2785 funcionários. Graças a toda essa amplitude da empresa, o número de árvores por quilômetro quadrado em SP subiu para 578.</p>
+                    </div>
+                    
+                    <div class="section-content production">
+                        <h2>2020</h2>
+                        <p>Em 2020, por conta pandemia precisamos fechar nossos escritórios temporários em Moscow mas, apesar disso, a empresa conseguiu abrir mais um escritório em São Paulo, subindo o número de funcionários de 2785 para 2908. Além também, da parceria feita com os hospitais de SP em que fornecemos uma série de respiradores, materias cirurgicos biodegradáveis, entre outros. O Número de árvores por quilômetro quadrado em SP subiu para 601.</p>
+                    </div>
+                    
+                    <div class="section-content analysis">
+                        <h2>Hoje em Dia</h2>
+                        <p>Atualmente, conseguimos uma marca incrível no mundo inteiro, um aumento do número de funcionários apesar de, todo o caos causado pela pandemia, o número subiu de 2908 para 3311, um aumento de quase 13%. Além de também, o número de árvores por quilômetro quadrado em São Paulo cresceu consideravelmente bem, foi de 601 para 635. Nossa meta é atingir um marco histórico, nos incríveis 700 árvores por quilômetro quadrado, caso nos chegarmos a esse número São Paulo se tornará a cidade mundial mais arvorizada na história.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+                <script>
+                    
+                    $(".step").click( function() {
+                    $(this).addClass("active").prevAll().addClass("active");
+                    $(this).nextAll().removeClass("active");
+                });
+
+                $(".step01").click( function() {
+                    $("#line-progress").css("width", "3%");
+                    $(".discovery").addClass("active").siblings().removeClass("active");
+                });
+
+                $(".step02").click( function() {
+                    $("#line-progress").css("width", "25%");
+                    $(".strategy").addClass("active").siblings().removeClass("active");
+                });
+
+                $(".step03").click( function() {
+                    $("#line-progress").css("width", "50%");
+                    $(".creative").addClass("active").siblings().removeClass("active");
+                });
+
+                $(".step04").click( function() {
+                    $("#line-progress").css("width", "75%");
+                    $(".production").addClass("active").siblings().removeClass("active");
+                });
+
+                $(".step05").click( function() {
+                    $("#line-progress").css("width", "100%");
+                    $(".analysis").addClass("active").siblings().removeClass("active");
+                });
+
+                
+                    </script>
+
+        <!--Rodapé-->
+            <a name="contato"></a>
+            <footer class="footer">
+                <div class="conteudo-principal">
+                    <div class="esquerda box"> <!--Caixa da Esquerda do Rodapé-->
+                        <h2> Sobre nós</h2>
+                        <div class="content">
+                            <p>Nós somos uma equipe que visa acima de qualquer coisa, o bem-estar da natureza para que floresça até o último dia possível nesse planeta</p>
+                        </div>
+                    </div>
+                    <div class="centro box"> <!--Caixa Central do Rodapé-->
+                        <h2>Endereço</h2>
+                        <div class="content">
+                            <div class="place">
+                                <span class="fax fa-map-marker"></span>
+                                <span class="text">Rua Antônio Macedo, 505 - Parque São Jorge</span>
+                            </div>
+
+                            <div class="phone">
+                                <span class="fax fa-phone-alt"></span>
+                                <span class="text">+55 11 2090-4500</span>
+                            </div>
+
+                            <div class="email">
+                                <span class="fax fa-envelope"></span>
+                                <span class="text">renan.re@unip.br</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direita box"> <!--Caixa da Direita do Rodapé-->
+                        <h2>Contato</h2>
+                        <div class="content">
+                            <form action="#">
+                                <div class="email">
+                                    <div class="text">Email *</div>
+                                    <input type="email" required>
+                                </div>
+                                <div class="msg">
+                                    <div class="text">Mensagem *</div>
+                                    <textarea rows="2" cols="25" required></textarea>
+                                </div>
+                                <div class="btn">
+                                    <button type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom"> <!--Parte inferior do Rodapé-->
+                    <div class="centro">
+                        <span class="credito">Criado pela <a href="www.unip.br">UNIP</a></span>
+                        <span class="copyright">2022 Todos os diteitos reservados &copy; </span>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="/javascript/script.js"></script>
+    </body>
+</html>
